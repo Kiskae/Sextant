@@ -1,0 +1,16 @@
+apply plugin: 'scala'
+
+apply from: rootProject.file('gradle/scala-compat.gradle')
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.scala-lang', name: 'scala-library', version: scala_version
+    compile group: 'com.sksamuel.scrimage', name: scalaDep('scrimage-core'), version: '2.1.0'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.13'
+}

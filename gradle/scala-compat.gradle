@@ -1,0 +1,5 @@
+ext.scala_version = VersionNumber.parse("2.11.8")
+
+ext.scalaDep = { name ->
+    "${name}_${scala_version.getMajor()}.${scala_version.getMinor()}"
+}
